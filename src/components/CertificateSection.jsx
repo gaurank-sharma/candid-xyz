@@ -24,7 +24,7 @@ const CertificateSection = () => {
             <img 
               src="/Certificate.jpeg" 
               alt="Citation ISO Certification 9001 and 27001" 
-              className="relative z-10 max-h-[320px] object-contain drop-shadow-lg transform hover:scale-105 transition-transform duration-500"
+              className="relative z-10  object-fit drop-shadow-lg transform hover:scale-105 transition-transform duration-500"
             />
           </div>
 
