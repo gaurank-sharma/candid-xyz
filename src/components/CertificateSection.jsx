@@ -22,7 +22,7 @@ const CertificateSection = () => {
             
             {/* REPLACE THIS SRC WITH YOUR UPLOADED IMAGE PATH */}
             <img 
-              src="/path-to-your-certificate-image.png" 
+              src="/Certificate.jpeg" 
               alt="Citation ISO Certification 9001 and 27001" 
               className="relative z-10 max-h-[320px] object-contain drop-shadow-lg transform hover:scale-105 transition-transform duration-500"
             />
