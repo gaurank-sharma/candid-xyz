@@ -24,7 +24,7 @@ const CertificateSection = () => {
            <img 
            src="/Certificate.jpeg"
            alt="Citation ISO Certification 9001 and 27001"
-           className="absolute inset-0 w-full h-full object-cover"
+           className="absolute inset-0 w-full h-full object-fit"
             />
 
 
