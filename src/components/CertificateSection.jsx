@@ -21,11 +21,12 @@ const CertificateSection = () => {
             <div className="absolute w-48 h-48 bg-white rounded-full opacity-50 blur-2xl"></div>
             
             {/* REPLACE THIS SRC WITH YOUR UPLOADED IMAGE PATH */}
-            <img 
+           <img 
            src="/Certificate.jpeg"
            alt="Citation ISO Certification 9001 and 27001"
-           className="relative z-10 max-h-[260px] max-w-full object-contain drop-shadow-lg transition-transform duration-500 hover:scale-105"
+           className="absolute inset-0 w-full h-full object-cover"
             />
+
 
           </div>
 
