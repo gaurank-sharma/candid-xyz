@@ -16,7 +16,7 @@ const CertificateSection = () => {
         <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
           
           {/* Left Side: The Image (Badge) */}
-          <div className="w-full md:w-1/3 bg-gradient-to-br from-gray-100 to-gray-200 p-8 flex justify-center items-center relative">
+          <div className="w-full md:w-1/3 h-[160px] md:h-[360px] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
             {/* Decorative background circle */}
             <div className="absolute w-48 h-48 bg-white rounded-full opacity-50 blur-2xl"></div>
             
