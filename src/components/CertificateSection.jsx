@@ -24,7 +24,7 @@ const CertificateSection = () => {
             
             {/* Badge Image */}
             <img 
-              src="/image_d48402.png" 
+              src="/Certificate.png" 
               alt="Citation ISO Certification - Integrated Management System"
               className="relative w-full h-auto object-contain drop-shadow-sm z-10"
             />
