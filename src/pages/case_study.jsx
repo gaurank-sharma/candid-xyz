@@ -190,50 +190,53 @@ export default function CaseStudies() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cases.map((item) => (
-              <Link
-                // 2. Pointing to the Case Study Detail Route
-                to={`/case-study/${item.slug}`}
-                key={item._id}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-xl overflow-hidden group transition-all duration-300 border border-slate-100 flex flex-col h-full"
-              >
-                {/* Image Wrapper */}
-                <div className="h-56 w-full overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 duration-500" />
-                  <img
-                    src={item.heroImage || 'https://via.placeholder.com/600x400?text=Case+Study'}
-                    alt={item.title}
-                    className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
+  <Link
+    to={`/case-study/${item.slug}`}
+    key={item._id}
+    className="bg-white rounded-2xl shadow-sm hover:shadow-xl overflow-hidden group transition-all duration-300 border border-slate-100 flex flex-col h-full"
+  >
+    {/* --- IMAGE FIX START --- */}
+    {/* Changed background to gray-50 to frame the image nicely */}
+    <div className="h-56 w-full overflow-hidden relative bg-gray-50 flex items-center justify-center border-b border-gray-100">
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500" />
+      <img
+        src={item.heroImage || 'https://via.placeholder.com/600x400?text=Case+Study'}
+        alt={item.title}
+        // CHANGED: 'object-cover' -> 'object-contain'
+        // ADDED: 'p-4' (padding) so the image doesn't touch the edges
+        className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+      />
+    </div>
+    {/* --- IMAGE FIX END --- */}
 
-                {/* Content Wrapper */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="mb-4">
-                    <span className="bg-teal-50 text-teal-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-teal-100">
-                      Case Study
-                    </span>
-                  </div>
+    {/* Content Wrapper */}
+    <div className="p-8 flex flex-col flex-grow">
+      <div className="mb-4">
+        <span className="bg-teal-50 text-teal-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-teal-100">
+          Case Study
+        </span>
+      </div>
 
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-teal-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  
-                  <div className="flex items-center gap-2 text-gray-400 text-xs mb-5">
-                    <Calendar size={14} />
-                    <span>{new Date(item.createdAt).toLocaleDateString()}</span>
-                  </div>
+      <h3 className="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-teal-600 transition-colors">
+        {item.title}
+      </h3>
+      
+      <div className="flex items-center gap-2 text-gray-400 text-xs mb-5">
+        <Calendar size={14} />
+        <span>{new Date(item.createdAt).toLocaleDateString()}</span>
+      </div>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
-                    {createExcerpt(item.sections)}
-                  </p>
-                  
-                  <div className="flex items-center text-teal-600 font-bold text-sm group/link mt-auto">
-                    Read Full Story 
-                    <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            ))}
+      <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+        {createExcerpt(item.sections)}
+      </p>
+      
+      <div className="flex items-center text-teal-600 font-bold text-sm group/link mt-auto">
+        Read Full Story 
+        <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
+      </div>
+    </div>
+  </Link>
+))}
           </div>
         )}
 
@@ -247,5 +250,6 @@ export default function CaseStudies() {
     </div>
   );
 }
+
 
 
