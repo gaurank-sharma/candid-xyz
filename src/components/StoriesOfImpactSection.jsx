@@ -234,7 +234,7 @@ const StoriesOfImpactSection = () => {
         
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
-           Our Ima
+           Our Top Case Studies
           </h2>
           <p className="text-gray-500 mt-2">Real results transforming healthcare and society</p>
         </div>
@@ -347,4 +347,5 @@ const StoriesOfImpactSection = () => {
 
 
 export default StoriesOfImpactSection;
+
 
