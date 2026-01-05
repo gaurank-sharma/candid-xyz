@@ -50,7 +50,7 @@ export default function PostView() {
                   <img
                     src={section.image}
                     alt="Section"
-                    className="w-full md:w-[350px] h-[210px] md:h-[320px] object-cover rounded-lg shadow-lg"
+                    className="w-full h-full object-contain rounded-lg shadow-lg"
                   />
                 
 
@@ -115,4 +115,5 @@ export default function PostView() {
     </div>
   );
 }
+
 
