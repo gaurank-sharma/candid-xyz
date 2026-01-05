@@ -43,37 +43,20 @@ export default function PostView() {
                 idx % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
-              {section.image && (
-                  {/* --- OPTION 1: Natural flow (image adjusts to text) --- */}
-
-                  <div className="w-full md:w-[45%] shrink-0">
-               
-                  <img
-                    src={section.image}
-                    alt="Section"
-                    className="w-full h-auto object-contain rounded-xl shadow-md border border-gray-200"
-                  />
-                
-
-                  {/* --- OPTION 2: Top aligned (no equal height, text & img top) --- */}
-                  {/*
-                  <img
-                    src={section.image}
-                    alt="Section"
-                    className="w-full md:w-[350px] object-cover rounded-lg shadow-lg"
-                  />
-                  */}
-
-                  {/* --- OPTION 3: Equal height card style --- */}
-                  {/* <div className="w-full md:w-[350px]  h-[220px] md:h-auto flex-shrink-0">
-                    <img
-                      src={section.image}
-                      alt="Section"
-                      className="w-full h-full object-cover rounded-lg shadow-lg"
-                    />
-                  </div> */}
-            </div>
-              )}
+             {/* Image Column */}
+               {section.image && (
+               <div className="w-full md:w-[45%] shrink-0">
+                <img
+                src={section.image}
+                alt={`Section ${idx + 1}`}
+              // FIX 1: Removed 'md:h-[300px]' so the image can grow naturally
+             // FIX 2: Changed 'object-cover' to 'object-contain'
+              // FIX 3: Added 'border' to frame white screenshots against the white page
+             className="w-full h-auto object-contain rounded-xl shadow-md border border-gray-200"
+             />
+              </div>
+             )}
+              
 
              <div
                 className="prose prose-lg max-w-none items-center text-justify"
@@ -116,6 +99,7 @@ export default function PostView() {
     </div>
   );
 }
+
 
 
 
