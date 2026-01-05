@@ -5,7 +5,7 @@
 // import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 // import { getCases } from '../utils/api'; // Ensure path is correct
 
-// const StoriesOfImpactSection = () => {
+// const case StudiesOfImpactSection = () => {
 //   const [posts, setPosts] = useState([]);
 //   const [loading, setLoading] = useState(true);
 //   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +54,7 @@
 //     return plainText.length > 180 ? plainText.substring(0, 180) + "..." : plainText;
 //   };
 
-//   if (loading) return <div className="h-96 flex items-center justify-center">Loading Impact Stories...</div>;
+//   if (loading) return <div className="h-96 flex items-center justify-center">Loading Impact case Studies...</div>;
 //   if (posts.length === 0) return null; // Don't show section if no data
 
 //   const currentPost = posts[currentIndex];
@@ -66,7 +66,7 @@
 //         {/* Section Header */}
 //         <div className="text-center mb-12">
 //           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
-//             Stories of Impact
+//             case Studies of Impact
 //           </h2>
 //           <p className="text-gray-500 mt-2">Real results transforming healthcare and society</p>
 //         </div>
@@ -138,7 +138,7 @@
 //                     to={`/case-study/${currentPost.slug}`}
 //                     className="inline-flex items-center gap-2 bg-[var(--color-secondary)] text-[var(--color-primary-dark)] font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-fit group"
 //                   >
-//                     Read Full Story
+//                     Read Full Case Study
 //                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
 //                   </Link>
 //                 </div>
@@ -170,7 +170,7 @@
 //   );
 // };
 
-// export default StoriesOfImpactSection;
+// export default case StudiesOfImpactSection;
 
 
 
@@ -180,7 +180,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { getCases } from '../utils/api'; 
 
-const StoriesOfImpactSection = () => {
+const case StudiesOfImpactSection = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -223,7 +223,7 @@ const StoriesOfImpactSection = () => {
     return plainText.length > 180 ? plainText.substring(0, 180) + "..." : plainText;
   };
 
-  if (loading) return <div className="h-96 flex items-center justify-center">Loading Impact Stories...</div>;
+  if (loading) return <div className="h-96 flex items-center justify-center">Loading Impact Case Studies...</div>;
   if (posts.length === 0) return null; 
 
   const currentPost = posts[currentIndex];
@@ -234,7 +234,7 @@ const StoriesOfImpactSection = () => {
         
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
-            Stories of Impact
+           Our Ima
           </h2>
           <p className="text-gray-500 mt-2">Real results transforming healthcare and society</p>
         </div>
@@ -313,7 +313,7 @@ const StoriesOfImpactSection = () => {
                     to={`/case-study/${currentPost.slug}`}
                     className="inline-flex items-center gap-2 bg-[var(--color-secondary)] text-[var(--color-primary-dark)] font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-fit group"
                   >
-                    Read Full Story
+                    Read Full Case Study
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -345,4 +345,5 @@ const StoriesOfImpactSection = () => {
   );
 };
 
-export default StoriesOfImpactSection;
+
+export default case StudiesOfImpactSection;
