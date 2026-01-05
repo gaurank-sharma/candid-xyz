@@ -72,7 +72,7 @@ export default function PostView() {
                       className="w-full h-full object-cover rounded-lg shadow-lg"
                     />
                   </div> */}
-                </>
+            </div>
               )}
 
              <div
@@ -116,6 +116,7 @@ export default function PostView() {
     </div>
   );
 }
+
 
 
 
