@@ -44,13 +44,14 @@ export default function PostView() {
               }`}
             >
               {section.image && (
-                <>
                   {/* --- OPTION 1: Natural flow (image adjusts to text) --- */}
+
+                  <div className="w-full md:w-[45%] shrink-0">
                
                   <img
                     src={section.image}
                     alt="Section"
-                    className="w-full h-full object-contain rounded-lg shadow-lg"
+                    className="w-full h-auto object-contain rounded-xl shadow-md border border-gray-200"
                   />
                 
 
@@ -115,5 +116,6 @@ export default function PostView() {
     </div>
   );
 }
+
 
 
