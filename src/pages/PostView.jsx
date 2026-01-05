@@ -52,7 +52,7 @@ export default function PostView() {
               // FIX 1: Removed 'md:h-[300px]' so the image can grow naturally
              // FIX 2: Changed 'object-cover' to 'object-contain'
               // FIX 3: Added 'border' to frame white screenshots against the white page
-             className="w-full h-auto md:w-[250px] md:h-[300px] object-contain rounded-xl shadow-md border border-gray-200"
+             className="w-full h-auto md:w-auto md:h-[300px] object-contain rounded-xl shadow-md border border-gray-200"
              />
               </>
              )}
@@ -99,6 +99,7 @@ export default function PostView() {
     </div>
   );
 }
+
 
 
 
