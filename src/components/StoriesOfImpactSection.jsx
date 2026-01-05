@@ -180,7 +180,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { getCases } from '../utils/api'; 
 
-const case StudiesOfImpactSection = () => {
+const StoriesOfImpactSection = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -346,4 +346,5 @@ const case StudiesOfImpactSection = () => {
 };
 
 
-export default case StudiesOfImpactSection;
+export default StoriesOfImpactSection;
+
