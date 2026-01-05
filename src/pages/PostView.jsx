@@ -45,7 +45,7 @@ export default function PostView() {
             >
              {/* Image Column */}
                {section.image && (
-               <div className="w-full md:w-[45%] shrink-0">
+              <>
                 <img
                 src={section.image}
                 alt={`Section ${idx + 1}`}
@@ -54,7 +54,7 @@ export default function PostView() {
               // FIX 3: Added 'border' to frame white screenshots against the white page
              className="w-full h-auto md:h-[300px] object-contain rounded-xl shadow-md border border-gray-200"
              />
-              </div>
+              </>
              )}
               
 
@@ -99,6 +99,7 @@ export default function PostView() {
     </div>
   );
 }
+
 
 
 
