@@ -8,7 +8,7 @@ const CertificateSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            ACCREDITATIONS
+           CERTIFICATION
           </h2>
           <div className="w-24 h-1 bg-[#E4007C] mx-auto mt-4 rounded-full"></div>
         </div>
