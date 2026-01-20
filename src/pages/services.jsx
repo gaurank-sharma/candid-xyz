@@ -38,56 +38,56 @@ const eprServices = [
     title: "EPR Implementation Strategy",
     tags: ["planning", "roadmap", "execution"],
     description:
-      "We define a step-by-step ERP implementation roadmap tailored to your business. From requirement gathering to deployment, we ensure alignment with company goals, risk reduction, and measurable success. This strategy helps organizations transform their operations smoothly and efficiently."
+      "We define a step-by-step EPR implementation roadmap tailored to your business. From requirement gathering to deployment, we ensure alignment with company goals, risk reduction, and measurable success. This strategy helps organizations transform their operations smoothly and efficiently."
   },
   {
     logo: "T",
     title: "Testing",
     tags: ["unit tests", "integration", "validation"],
     description:
-      "ERP testing covers all modules, integrations, and performance checks. We simulate real-world workflows, validate data accuracy, and guarantee that your ERP system runs smoothly before going live, reducing costly downtime and risks post-deployment."
+      "EPR testing covers all modules, integrations, and performance checks. We simulate real-world workflows, validate data accuracy, and guarantee that your EPR system runs smoothly before going live, reducing costly downtime and risks post-deployment."
   },
   {
     logo: "A",
     title: "Application Staff Augmentation",
     tags: ["skilled experts", "on-demand", "scalable"],
     description:
-      "We provide experienced ERP specialists to strengthen your in-house teams. Whether short-term or long-term, our experts bring deep functional and technical knowledge, accelerating project delivery while reducing hiring costs."
+      "We provide experienced EPR specialists to strengthen your in-house teams. Whether short-term or long-term, our experts bring deep functional and technical knowledge, accelerating project delivery while reducing hiring costs."
   },
   {
     logo: "C",
     title: "Command Center Support",
     tags: ["24/7 monitoring", "incident response", "stability"],
     description:
-      "Our ERP command center ensures round-the-clock monitoring, incident management, and issue resolution. This proactive approach minimizes disruptions, ensures business continuity, and improves user satisfaction with system stability."
+      "Our EPR command center ensures round-the-clock monitoring, incident management, and issue resolution. This proactive approach minimizes disruptions, ensures business continuity, and improves user satisfaction with system stability."
   },
   {
     logo: "P",
     title: "Projects & Resource Planning",
     tags: ["resource allocation", "efficiency", "scheduling"],
     description:
-      "We manage ERP projects with precise resource planning, timelines, and budgets. By leveraging advanced tools, we ensure efficient allocation, reduced bottlenecks, and seamless collaboration across teams for faster delivery."
+      "We manage EPR projects with precise resource planning, timelines, and budgets. By leveraging advanced tools, we ensure efficient allocation, reduced bottlenecks, and seamless collaboration across teams for faster delivery."
   },
   {
     logo: "T",
     title: "Training",
     tags: ["end-user", "administration", "adoption"],
     description:
-      "Our tailored ERP training programs equip both end-users and administrators with essential skills. This ensures maximum adoption, reduces errors, and empowers employees to use ERP tools effectively in daily workflows."
+      "Our tailored EPR training programs equip both end-users and administrators with essential skills. This ensures maximum adoption, reduces errors, and empowers employees to use EPR tools effectively in daily workflows."
   },
   {
     logo: "G",
     title: "Go Live / Activation",
     tags: ["transition", "support", "risk-free"],
     description:
-      "We provide end-to-end support during ERP activation. Our experts ensure a seamless transition from testing to live usage, minimizing disruptions, and offering hyper-care support during the critical first weeks of launch."
+      "We provide end-to-end support during EPR activation. Our experts ensure a seamless transition from testing to live usage, minimizing disruptions, and offering hyper-care support during the critical first weeks of launch."
   },
   {
     logo: "D",
     title: "Data Strategy & Migration",
     tags: ["secure transfer", "accuracy", "compliance"],
     description:
-      "We design data migration strategies that ensure secure, accurate, and compliant transfer to ERP systems. Our methodology reduces errors, maintains integrity, and prepares your data for analytics and decision-making."
+      "We design data migration strategies that ensure secure, accurate, and compliant transfer to EPR systems. Our methodology reduces errors, maintains integrity, and prepares your data for analytics and decision-making."
   }
 ];
 
@@ -97,7 +97,7 @@ const appServices = [
     title: "System Upgrades",
     tags: ["latest features", "security", "performance"],
     description:
-      "Our upgrade services ensure your applications stay current with the latest ERP versions, feature updates, and compliance requirements. This prevents security risks, improves performance, and allows your business to leverage new functionalities seamlessly."
+      "Our upgrade services ensure your applications stay current with the latest EPR versions, feature updates, and compliance requirements. This prevents security risks, improves performance, and allows your business to leverage new functionalities seamlessly."
   },
   {
     logo: "S",
@@ -118,14 +118,14 @@ const appServices = [
     title: "Targeted Projects",
     tags: ["short-term", "custom", "focused"],
     description:
-      "Our teams deliver targeted ERP and application projects that address specific challenges. These short-term, high-impact projects help organizations gain quick wins, accelerate transformations, and resolve bottlenecks efficiently."
+      "Our teams deliver targeted EPR and application projects that address specific challenges. These short-term, high-impact projects help organizations gain quick wins, accelerate transformations, and resolve bottlenecks efficiently."
   },
   {
     logo: "S",
     title: "Staff Augmentation",
     tags: ["expertise", "on-demand", "scalable teams"],
     description:
-      "We supply skilled ERP and application experts on-demand. Whether filling a temporary gap or scaling teams for large projects, our augmentation services ensure flexibility, expertise, and faster project outcomes."
+      "We supply skilled EPR and application experts on-demand. Whether filling a temporary gap or scaling teams for large projects, our augmentation services ensure flexibility, expertise, and faster project outcomes."
   }
 ];
 
@@ -213,4 +213,5 @@ export default function ServicesPage() {
     </section>
     </div>
   );
+
 }
