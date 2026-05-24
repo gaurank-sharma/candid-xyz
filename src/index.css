@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+ :root {
+  --color-primary-dark: #0B9F94; /* Teal */
+  --color-primary-light: #00F6FF; /* Cyan */
+  --color-text-primary: #000000; /* Black */
+  --color-text-secondary: #4B4B4B; /* Gray */
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+}
+
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Tailwind utility bindings */
+.animate-scrollLeft {
+  animation: scrollLeft linear infinite;
+}
+
+.animate-scrollRight {
+  animation: scrollRight linear infinite;
+}
+
+.animate-scrollUp {
+  animation: scrollUp linear infinite;
+}
+
+.animate-scrollDown {
+  animation: scrollDown linear infinite;
+}
+
+/* Optional: Pause on hover (desktop only) */
+@media (hover: hover) {
+  .animate-scrollLeft:hover,
+  .animate-scrollRight:hover,
+  .animate-scrollUp:hover,
+  .animate-scrollDown:hover {
+    animation-play-state: paused;
+  }
+}
