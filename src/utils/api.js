@@ -329,7 +329,7 @@
 
 
 
-const API_URL = "http://localhost:5001/api";
+const API_URL = "https://candid-backend.vercel.app/api";
 const VITE_CLOUDINARY_CLOUD_NAME = "dx0hznaxr";
 
 // Helper to get token from localStorage
