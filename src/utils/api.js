@@ -332,8 +332,23 @@
 const API_URL = "https://candid-backend.vercel.app/api";
 const VITE_CLOUDINARY_CLOUD_NAME = "dx0hznaxr";
 
-// Helper to get token from localStorage
 const getToken = () => localStorage.getItem("token");
+
+export const logout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("role");
+  window.location.href = "/admin/login";
+};
+
+const authFetch = async (url, options = {}) => {
+  const res = await fetch(url, options);
+  if (res.status === 401) {
+    const data = await res.json().catch(() => ({}));
+    if (data.expired) logout();
+    throw new Error(data.msg || "Unauthorized");
+  }
+  return res;
+};
 
 /* ------------------------ AUTH ------------------------ */
 export const login = async (email, password) => {
@@ -372,7 +387,7 @@ export const getPost = async (slug) => {
 
 // Protected
 export const createPost = async (postData) => {
-  const res = await fetch(`${API_URL}/posts`, {
+  const res = await authFetch(`${API_URL}/posts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -389,7 +404,7 @@ export const createPost = async (postData) => {
 };
 
 export const updatePost = async (id, postData) => {
-  const res = await fetch(`${API_URL}/posts/${id}`, {
+  const res = await authFetch(`${API_URL}/posts/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -406,7 +421,7 @@ export const updatePost = async (id, postData) => {
 };
 
 export const deletePost = async (id) => {
-  const res = await fetch(`${API_URL}/posts/${id}`, {
+  const res = await authFetch(`${API_URL}/posts/${id}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${getToken()}` },
   });
@@ -465,7 +480,7 @@ export const createContact = async (contactData) => {
 };
 
 export const getContacts = async () => {
-  const res = await fetch(`${API_URL}/contact`, {
+  const res = await authFetch(`${API_URL}/contact`, {
     headers: { Authorization: `Bearer ${getToken()}` },
   });
 
@@ -479,7 +494,7 @@ export const getContacts = async () => {
 
 /* ------------------------ USER MANAGEMENT (SUPER ADMIN) ------------------------ */
 export const getUsers = async () => {
-  const res = await fetch(`${API_URL}/users`, {
+  const res = await authFetch(`${API_URL}/users`, {
     headers: { Authorization: `Bearer ${getToken()}` },
   });
 
@@ -491,7 +506,7 @@ export const getUsers = async () => {
 };
 
 export const createUser = async (userData) => {
-  const res = await fetch(`${API_URL}/users`, {
+  const res = await authFetch(`${API_URL}/users`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -508,7 +523,7 @@ export const createUser = async (userData) => {
 };
 
 export const updateUser = async (id, userData) => {
-  const res = await fetch(`${API_URL}/users/${id}`, {
+  const res = await authFetch(`${API_URL}/users/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -525,7 +540,7 @@ export const updateUser = async (id, userData) => {
 };
 
 export const deleteUser = async (id) => {
-  const res = await fetch(`${API_URL}/users/${id}`, {
+  const res = await authFetch(`${API_URL}/users/${id}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${getToken()}` },
   });
@@ -565,8 +580,7 @@ export const getCaseBySlug = getCase;
 
 // Protected
 export const createCase = async (postData) => {
-  // Creates at the /api/case-study route
-  const res = await fetch(`${API_URL}/case-study`, {
+  const res = await authFetch(`${API_URL}/case-study`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -583,8 +597,7 @@ export const createCase = async (postData) => {
 };
 
 export const updateCase = async (id, postData) => {
-  // Updates at the /api/case-study route
-  const res = await fetch(`${API_URL}/case-study/${id}`, {
+  const res = await authFetch(`${API_URL}/case-study/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -601,8 +614,7 @@ export const updateCase = async (id, postData) => {
 };
 
 export const deleteCase = async (id) => {
-  // Deletes from the /api/case-study route
-  const res = await fetch(`${API_URL}/case-study/${id}`, {
+  const res = await authFetch(`${API_URL}/case-study/${id}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${getToken()}` },
   });
@@ -631,7 +643,7 @@ export const createRFP = async (rfpData) => {
 
 // Protected – View all RFP submissions
 export const getRFPs = async () => {
-  const res = await fetch(`${API_URL}/rfp`, {
+  const res = await authFetch(`${API_URL}/rfp`, {
     headers: { Authorization: `Bearer ${getToken()}` },
   });
 

@@ -198,7 +198,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getPosts, getContacts, getCases, getRFPs } from '../utils/api';
+import { getPosts, getContacts, getCases, getRFPs, logout } from '../utils/api';
 import {
   LayoutDashboard,
   FileText,
@@ -208,6 +208,7 @@ import {
   Users,
   BookCopy,
   Clipboard,
+  LogOut,
 } from 'lucide-react';
 
 // ---------- Small UI Components ----------
@@ -303,6 +304,13 @@ export default function Dashboard() {
               <PlusCircle size={20} />
               Create New Case Study
             </Link>
+            <button
+              onClick={logout}
+              className="bg-red-500 text-white px-5 py-2.5 rounded-lg shadow hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+            >
+              <LogOut size={20} />
+              Logout
+            </button>
           </div>
         </div>
 
